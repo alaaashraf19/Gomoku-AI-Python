@@ -181,3 +181,6 @@ class GomokuGui:
             pg.display.flip()
             self.clock.tick(60)
     #pg.quit()
+if __name__ == "__main__":
+    gui = GomokuGui()
+    gui.start_menu()
