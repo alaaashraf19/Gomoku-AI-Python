@@ -151,9 +151,17 @@ class Gomoku:
             return best_move, minscore  
         
     def get_best_move(self):
-        best_move, best_score =self.minimax(3, True)
+        import time
+        start = time.time()
+        print("Current time:", time.strftime("%H:%M:%S"))
+        
+        best_move, best_score =self.minimax(10, True)
         if best_move is None:
             return None
+        
+        end = time.time()
+        print("Current time:", time.strftime("%H:%M:%S"))
+        print("Elapsed time:", end - start, "seconds")
         # print("Score is:", best_score)
         return best_move
 
