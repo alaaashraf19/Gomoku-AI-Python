@@ -126,9 +126,9 @@ class GomokuGui:
                     elif event.type == MOUSEBUTTONDOWN and event.button == 1:
                         mouse_pos = pg.mouse.get_pos()
                         if rectB.collidepoint(mouse_pos):
-                            self.human, self.game.ai = "B", "W"
+                            self.game.human, self.game.ai = "B", "W"
                         elif rectW.collidepoint(mouse_pos):
-                            self.human, self.game.ai = "W", "B"
+                            self.game.human, self.game.ai = "W", "B"
 
                         self.game=Gomoku(BOARD_SIZE, self.game.human, self.game.ai)
                         self.run()
@@ -136,6 +136,7 @@ class GomokuGui:
                     
                 pg.display.flip()
                 self.clock.tick(60)
+
     def run(self):
         winner = None
         while True:
@@ -150,7 +151,7 @@ class GomokuGui:
                         row = y // CELL_SIZE
                         if self.game.is_on_board(row, col):
                             if self.game.board[row][col] == " " and self.current_player == self.game.human:
-                                if self.game.make_move(row, col, self.current_player):
+                                if self.game.make_move((row, col), self.current_player):
                                     if self.game.is_win(self.current_player):
                                         winner = self.current_player
                                     self.current_player = self.game.ai
@@ -162,13 +163,16 @@ class GomokuGui:
                     winner = "Draw"
                 row, col = move
                 if self.game.board[row][col] == " ":
-                    if self.game.make_move(row, col, self.current_player):
+                    if self.game.make_move(move, self.current_player):
                         if self.game.is_win(self.current_player):
                             winner = self.current_player
                         self.current_player = self.game.human
 
             self.draw_board(self.screen)
             
+            pg.display.flip()
+            self.clock.tick(60)
+
             if winner:
                 if winner == "Draw":
                     self.show_game_over("It's a Draw!")
@@ -178,8 +182,6 @@ class GomokuGui:
                     self.show_game_over("AI wins!")
                 return
 
-            pg.display.flip()
-            self.clock.tick(60)
     #pg.quit()
 if __name__ == "__main__":
     gui = GomokuGui()
