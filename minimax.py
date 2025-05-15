@@ -232,9 +232,9 @@ class Gomoku:
         self.print_board()
         winner_ai = self.is_win(self.ai)
         winner_human = self.is_win(self.human)
-        if winner_ai:
+        if winner_human:
             print("\nCongrats!! You win!")
-        elif winner_human:
+        elif winner_ai:
             print("\nAI wins!")
         else:
             print("\nDraw!")
