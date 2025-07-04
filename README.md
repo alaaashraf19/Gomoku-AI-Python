@@ -68,7 +68,7 @@ python Gomoku.py
 ### GUI Version
 ```bash
 python GUI.py
-
+```
     
 
 
