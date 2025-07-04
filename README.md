@@ -11,12 +11,13 @@ In this implementation:
 - The AI uses a **Minimax search algorithm** with depth limitation for efficient decision-making.
 
 ## 🗂️ Project Structure
+```
 Gomoku-AI-Python/
 │
 ├── Gomoku.py # Core logic and Minimax-based game engine (also supports console play)
 ├── GUI.py # GUI version of the game using Pygame (depends on Gomoku.py)
 └── README.md # Project documentation
-
+```
 ## 🎮 Features
 
 - Console and GUI-based gameplay
