@@ -64,6 +64,7 @@ Gomoku-AI-Python/
 ### Console Version
 ```bash
 python Gomoku.py
+
 ### GUI Version
 ```bash
 python GUI.py
