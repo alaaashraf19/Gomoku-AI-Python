@@ -59,9 +59,16 @@ Gomoku-AI-Python/
 
 - Python 3.x
 - `pygame` library
+## Installation
 
-## Running the Game
+1. **Clone the Repository**
+```bash
+git clone https://github.com/alaaashraf19/Gomoku-AI-Python.git
+cd Gomoku-AI-Python
+```
 
+2. **Running the Game**
+   
 ### Console Version
 ```bash
 python Gomoku.py
