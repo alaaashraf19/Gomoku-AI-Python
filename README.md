@@ -70,14 +70,10 @@ cd Gomoku-AI-Python
 2. **Running the Game**
    
    - Console Version
-```bash
-python Gomoku.py
-```
+   ```bash
+   python Gomoku.py
+   ```
    - GUI Version
-```bash
-python GUI.py
-```
-    
-
-
-
+   ```bash
+   python GUI.py
+   ```
