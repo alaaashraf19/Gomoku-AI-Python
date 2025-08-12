@@ -10,7 +10,7 @@ In this implementation:
 - You can play as the human player against an AI opponent.
 - The AI uses a **Minimax search algorithm** with depth limitation for efficient decision-making.
 
-## 🗂Project Structure
+## Project Structure
 ```
 Gomoku-AI-Python/
 │
